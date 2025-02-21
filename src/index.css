@@ -1,10 +1,10 @@
 /* 🌙 Dark Theme */
 :root {
-  --bg-color: hsl(0, 0%, 8%);
-  --primary-color: hsl(0, 0%, 15%);
-  --secondary-color: #252525;
+  --bg-color: #11434a;
+  --primary-color: #969696;
+  --secondary-color: #010101;
   --text-color: #E0E0E0;
-  --accent-color: #00A884;
+  --accent-color: #f9f9f9;
   --error-color: #ff4d4d;
   --bot-message: #1e4620;
   --user-message: #004d40;
@@ -18,6 +18,8 @@
 
 body {
   background-color: var(--bg-color);
+  font-family: sans-serif;
+  font-weight: 400;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -25,28 +27,22 @@ body {
 }
 
 .cardBody {
-  margin: 1%;
   border: 2px solid var(--accent-color);
-  border-radius: 15px;
-  padding: 1%;
+  border-radius: 1rem;
+  padding: .75rem 0.5rem;
   display: flex;
   flex-direction: column;
-  height: 90vh;
-  width: 90%;
-  max-width: 1200px;
+  align-items: center;
+  height: 80vh;
+  width: 100%;
 }
 
 /* 📜 Main Chat Container */
 .chat-container {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   background: var(--primary-color);
   border-radius: 10px;
-  padding: 2%;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
 
@@ -71,7 +67,7 @@ body {
 .message {
   display: flex;
   align-items: center;
-  margin: 10px 10px;
+  margin: 10px;
 }
 
 .message p {
@@ -102,7 +98,7 @@ body {
   border-bottom-right-radius: 5px;
 }
 
-/* 📌 Input Box */
+/* Input Box */
 .input-container {
   display: flex;
   align-items: center;
@@ -113,13 +109,15 @@ body {
 
 #answer {
   width: 100%;
-  display: flex;
-  padding: 1%;
+  /* display: flex; */
+  padding: 10px 0;
   gap: 5px;
   flex-wrap: wrap;
 }
 
 textarea {
+  width: 100%;
+  margin-bottom: 10px;
   flex: 1;
   background: var(--secondary-color);
   color: var(--text-color);
@@ -137,31 +135,36 @@ textarea {
 }
 
 button {
-  background: var(--accent-color);
-  color: #fff;
+  width: 100%;
+  background: var(--primary-color);
+  color: #000;
   border: none;
   padding: 10px 16px;
   cursor: pointer;
   border-radius: 6px;
   transition: 0.3s;
   font-size: 16px;
+
 }
 
 button:hover {
   background: #007a6d;
+  color: #fff;
 }
 
 #functions {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
-/* 🌎 Translation Form */
+/*ranslation Form */
 .translation-form {
   display: flex;
   flex-direction: row;
   gap: 16px;
-  padding: 20px;
+  padding: 10px 0;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -253,12 +256,18 @@ button:hover {
   margin-top: 5px;
 }
 
-/* 📱 Mobile Optimization */
+/* MEDIA QUERIES  */
+
 @media (max-width: 768px) {
+  .cardBody{
+    width: 80vw;
+
+  }
   .chat-container {
     width: 100%;
     height: 95vh;
     padding: 5%;
+    margin: auto;
   }
 
   .messages {
@@ -281,10 +290,10 @@ button:hover {
   button {
     padding: 8px 12px;
     font-size: 14px;
+    width: 100%;
   }
 
   .translation-form {
-    flex-direction: column;
     width: 100%;
   }
 
@@ -297,7 +306,6 @@ button:hover {
   }
 }
 
-/* 💻 Tablet Optimization */
 @media (max-width: 1024px) {
   .chat-container {
     width: 95%;
@@ -305,6 +313,6 @@ button:hover {
   }
 
   .translation-form {
-    width: 80%;
+    width: 100%;
   }
 }

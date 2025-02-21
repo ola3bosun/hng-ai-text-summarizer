@@ -1,8 +1,8 @@
 import React, { useState, useEffect} from "react";
 import "./App.css";
-import TextInput from "./components/TextInput";
+import TextInput from "./components/inputfield";
 import SummarizeButton from "./components/SummarizeButton";
-import OutputDisplay from "./components/OutputDisplay";
+import OutputDisplay from "./components/output";
 import Translation from "./components/Translation";
 
  

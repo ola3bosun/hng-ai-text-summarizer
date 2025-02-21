@@ -14,7 +14,7 @@ const OutputDisplay = ({ messages }) => {
           <p>{msg.text}</p>
         </div>
       ))}
-      {/* Invisible div to ensure auto-scroll */}
+    
       <div ref={messagesEndRef} />
     </div>
   );

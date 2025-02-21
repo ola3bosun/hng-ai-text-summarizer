@@ -85,7 +85,8 @@ const handleEnter = () =>{
     <>
         <div className="input-container">
             <div id='answer'>
-      <textarea value={detectedText} onChange={handleChange} placeholder="Type something..." />
+    <textarea value={detectedText} onChange={handleChange} placeholder="Enter Text" /> 
+      <br />
       <button onClick={handleEnter}>Send</button>
       </div>
       <span id='language'> Detected Language: {loading ? 'Initializing...' : detectedLang}</span> 
