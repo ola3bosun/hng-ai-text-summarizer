@@ -176,7 +176,13 @@ button:hover {
   font-size: 16px;
   color: var(--text-color);
   text-align: center;
-  width: 40%;
+}
+
+/* Empty message fallback */
+.empty-message {
+  text-align: center;
+  color: var(--text-color);
+  font-style: italic;
 }
 
 /*Language Dropdown */
